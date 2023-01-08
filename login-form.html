@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" type="text/css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="waveimg">
+        <div class="regtitle">
+          <h3>Welcome to Our DNI Store</h3>
+          <h5>Please Login and enjoy here.</h5>
+        </div>
+        <!-- <img src="./img/wave2.jpg" class="wave" alt="" /> -->
+        <div class="imginside">
+          <img src="./img/girlsit.svg" alt="" />
+        </div>
+      </div>
+      <!-- <div class="img">
+            <img src="./img/girlsit.svg" alt="">
+        </div> -->
+
+      <div class="login-container">
+        <form action="login-form.html">
+          <img class="avatar" src="./img/male.svg" alt="" />
+          <h2>Welcome</h2>
+          <div class="input-div one">
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h5>Username</h5>
+              <input type="text" class="input" name="" id="" />
+            </div>
+          </div>
+          <div class="input-div two">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5>Password</h5>
+              <input type="password" class="input" name="" id="" />
+            </div>
+          </div>
+          <a href="#">Forget Password?</a>
+          <input type="submit" class="btn" value="Login" />
+
+          <p class="social-text">Or Sign in with social platforms</p>
+          <div class="social-media">
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+      <script type="text/javascript">
+        const input = document.querySelectorAll(".input");
+
+        function focusFunc() {
+          let parent = this.parentNode.parentNode;
+          parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+          let parent = this.parentNode.parentNode;
+          if (this.value == "") {
+            parent.classList.remove("focus");
+          }
+        }
+
+        input.forEach((input) => {
+          input.addEventListener("focus", focusFunc);
+          input.addEventListener("blur", blurFunc);
+        });
+      </script>
+    </div>
+  </body>
+</html>
